@@ -1,0 +1,71 @@
+:root{
+    --color-first: rgb(255, 209, 152);
+    --color-second: rgb(255, 189, 138);
+    --color-third: rgb(255, 177, 111);
+    --color-fourth: rgb(204, 130, 165);
+    --color-fifth: rgb(96, 142, 181);
+
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(var(--color-first) 0%,
+    var(--color-second) 15%,
+    var(--color-third) 35%,
+    var(--color-fourth) 65%,
+    var(--color-fifth) 100%
+    );
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+h1{
+    font-size: 12rem;
+    text-align: center;
+}
+
+nav{
+    width: 20%;
+    height: 4rem;
+    padding: 1.5rem;
+    margin-left: 80%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+
+}
+
+.nav__links{
+    position: absolute;
+    right: 2vw;    
+    border-bottom: solid grey 1px;
+
+}
+
+.nav__link{
+    float: left;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: antiquewhite;
+    text-decoration: none;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+
+}
+
+.nav__link a:hover{
+    border-bottom: 3px solid red;
+}
+
+/*GTA 6 colours
+https://design.tutsplus.com/tutorials/how-to-recreate-the-gta-6-background--cms-108376
+*/
