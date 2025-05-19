@@ -1,8 +1,8 @@
-document.querySelector('.nav__links').addEventListener('mouseenter', function(el){
-    
-    if(el.target.classList.contains('.nav__link')) {
-            el.target.style.backgroundColor = 'orangered'
-            console.log(el.target)
-            
-        }
-})
+document.querySelector(".nav__links").addEventListener("click", function (el) {
+  el.preventDefault();
+
+  if (el.target.classList.contains("nav__link")) {
+    el.target.style.backgroundColor = "var(--color-fifth)";
+    console.log(el.target);
+  }
+});
