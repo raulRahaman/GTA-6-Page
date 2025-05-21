@@ -4,7 +4,8 @@
   --color-third: rgb(255, 177, 111);
   --color-fourth: rgb(204, 130, 165);
   --color-fifth: rgb(96, 142, 181);
-  --color-gradient-one: linear-gradient(to top left #ffd198, green, black);
+  --color-gradient-one: linear-gradient(to bottom right, rgb(96, 142, 181), rgb(204, 130, 165), rgb(255, 177, 111));
+  --color-gradient-two: linear-gradient(to bottom right, rgb(96, 142, 181), rgb(204, 130, 165));
 }
 
 html {
@@ -26,9 +27,10 @@ body {
 }
 
 h1 {
-  margin-top: 5rem !important;
-  margin-bottom: 2rem !important;
-  font-size: 12rem;
+  margin-top: 2.5% !important;
+  margin-bottom: 1rem !important;
+  font-size: 9rem;
+  font-family: "Times New Roman", Times, serif;;
 }
 h4 {
   font-size: 8rem;
@@ -36,7 +38,7 @@ h4 {
 }
 
 h1,
-h4 {
+h4, p, .btn {
   text-align: center;
   color: white;
   font-weight: 500;
@@ -45,6 +47,65 @@ h4 {
     0.5px -0.5px 0 black, -0.5px 0.5px 0 black, 0.5px 0.5px 0 black,
     -0.5px 0px 0 black, 0.5px 0px 0 black, 0px -0.5px 0 black, 0px 0.5px 0 black,
     /* Your custom shadow */ 10px 10px 10px var(--color-fourth);
+}
+
+nav {
+  width: 100%;
+  height: 2rem;
+  padding: 1.5rem;
+  margin-left: -2rem;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 100;
+  background-color: var(--color-fifth);
+  border-bottom: solid grey 2px;
+}
+
+.nav__links {
+  display: flex;
+
+}
+
+.nav__link {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  padding: 0 2rem;
+  margin-bottom: 1rem;
+}
+
+.image-wrapper {
+  width: 1500px;
+  height: auto;
+  overflow: hidden;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* or 'contain' */
+  border-radius: 2%;
+}
+
+.logo{
+  position: absolute;
+  width: 200px;
+  height: auto;
+  margin-left: 5rem;
+  transform: rotate(350deg);
+}
+
+.logo img{
+    width: 100%;
+  height: 100%;
+  object-fit: cover; /* or 'contain' */
 }
 
 .slogan {
@@ -56,52 +117,73 @@ h4 {
 
 .highlight {
   position: relative;
-  background-color: var(--color-gradient-one);
-}
-
-nav {
-  width: 20%;
-  height: 4rem;
+  background-image: var(--color-gradient-one);
+  text-shadow: none;
+  border-radius: 30px 0px 20px 0px;
   padding: 1.5rem;
-  margin-left: 80%;
-  position: fixed;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 100;
 }
 
-.nav__links {
+.preorder-btn{
   position: absolute;
-  right: 2vw;
+  right: 15vw;
+  bottom: 35vh;
 }
 
-.nav__link {
-  float: left;
-  font-size: 2.5rem;
-  font-weight: 700;
+.btn{
+  width: 20rem;
+  background-image: var(--color-gradient-one);
+  display: inline-flex;
+  justify-content: center;
   color: white;
-  text-decoration: none;
-  padding: 0 2rem;
-  margin-bottom: 1rem;
-  text-shadow:
-    /* Thinner black outline */ -0.1px -0.1px 0 black,
-    0.1px -0.1px 0 black, -0.1px 0.1px 0 black, 0.1px 0.1px 0 black,
-    -0.1px 0px 0 black, 0.1px 0px 0 black, 0px -0.1px 0 black, 0px 0.1px 0 black;
+  padding: 0.6rem 1.2rem;
+  border: solid 1px black;
+  border-radius: 8px;
+  text-decoration: none; /* Remove underline */
+  transition: transform 0.3s ease;
+  font-size: large;
+  padding: 20% 20%;
 }
 
-.image-wrapper {
-  width: 1500px;
-  height: auto;
-  overflow: hidden;
-  margin-left: 5%;
+.preorder-msg{
+  position: absolute;
+  top: 50rem;
+  left: 50rem;
+  width: 20vw;
+  background-image: var(--color-gradient-two);
+  border: solid black 2px;
+  border-radius: 10%;
+  padding: 15rem;
+  z-index: 5;
 }
 
-.image-wrapper img {
+.preorder-msg h4{
+  margin-bottom: 0;
+}
+
+.close-msg{
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.hidden{
+  display: none;
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* or 'contain' */
+  background-color: rgb(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 4;
 }
 
 /*GTA 6 colours
